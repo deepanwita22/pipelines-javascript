@@ -24,6 +24,12 @@ steps:
     npm test
   displayName: 'npm install and build'
 
+- task: SonarQubePrepare@4
+  inputs:
+    SonarQube: 'FDS'
+    scannerMode: 'CLI'
+    configMode: 'file'
+
 
 
 
