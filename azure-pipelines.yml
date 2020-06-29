@@ -24,11 +24,6 @@ steps:
     npm test
   displayName: 'npm install and build'
 
-npm install --only=dev
-
-- task: Npm@1
-  inputs:
-  command: 'install'
 
 
 
