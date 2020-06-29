@@ -18,11 +18,17 @@ steps:
 - script: |
     npm install
     npm run build
-    npm test
+    npm install --only=dev
+    npx mocha
     mocha test --reporter mocha-junit-reporter
+    npm test
   displayName: 'npm install and build'
 
+npm install --only=dev
 
+- task: Npm@1
+  inputs:
+  command: 'install'
 
 
 
