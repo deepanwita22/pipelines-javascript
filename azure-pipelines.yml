@@ -22,6 +22,10 @@ steps:
   displayName: 'npm install and build'
 
 
+
+- script: mocha test --reporter mocha-junit-reporter
+
+
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
